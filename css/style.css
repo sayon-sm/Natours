@@ -61,6 +61,8 @@ body {
   letter-spacing: 30px;
 
   text-transform: uppercase;
+
+  animation: toRight 1s ease-out;
 }
 .heading-secondary {
   color: #fff;
@@ -72,6 +74,8 @@ body {
   text-transform: uppercase;
 
   margin-bottom: 50px;
+
+  animation: toLeft 1s ease-out;
 }
 .btn-tours {
   display: inline-block;
@@ -86,4 +90,46 @@ body {
   border-radius: 90px;
 
   background-color: #fff;
+
+  animation: toUp 1s 0.75s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes toRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes toLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes toUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
