@@ -53,6 +53,7 @@ body {
 
   transform: translate(-50%, -70%);
 }
+
 .heading-primary {
   color: #fff;
 
@@ -64,6 +65,7 @@ body {
 
   animation: toRight 1s ease-out;
 }
+
 .heading-secondary {
   color: #fff;
 
@@ -77,12 +79,13 @@ body {
 
   animation: toLeft 1s ease-out;
 }
+
 .btn-tours {
   display: inline-block;
 
   text-decoration: none;
   color: inherit;
-  font-size: 18px;
+  font-size: 16px;
 
   text-transform: uppercase;
 
@@ -90,9 +93,40 @@ body {
   border-radius: 90px;
 
   background-color: #fff;
+  position: relative;
 
   animation: toUp 1s 0.75s;
   animation-fill-mode: backwards;
+
+  transition: all 0.4s;
+}
+.btn-tours:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn-tours:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-tours::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+
+  background-color: #fff;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+
+  transition: all 0.4s;
+}
+.btn-tours:hover::after {
+  transform: scaleX(1.4) scaley(1.6);
+  opacity: 0;
 }
 
 @keyframes toRight {
