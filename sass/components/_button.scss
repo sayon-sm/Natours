@@ -1,0 +1,60 @@
+.btn:link,
+.btn:visited {
+  display: inline-block;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+
+  position: relative;
+
+  transition: all 0.2s;
+  animation: toUp 1s 0.75s;
+  animation-fill-mode: backwards;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+}
+
+.btn--white {
+  background-color: $color-white;
+  color: $color-grey-dark;
+}
+
+.btn::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+
+  border-radius: 10rem;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+
+  transition: all 0.4s;
+}
+.btn--white::after {
+  background-color: $color-white;
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaley(1.6);
+  opacity: 0;
+}
+.btn--animated {
+  animation: toUp 0.5s ease-out 0.7s;
+
+  /* to make sure animation's 0% is added to element before animation begins */
+  animation-fill-mode: backwards;
+}
