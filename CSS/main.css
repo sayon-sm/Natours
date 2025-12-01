@@ -1,77 +1,3 @@
-*,
-*::after,
-*::before {
-  padding: 0;
-  margin: 0;
-  box-sizing: inherit;
-}
-
-html {
-  font-size: 62.5%;
-  overflow-y: hidden;
-}
-
-body {
-  overflow-y: hidden;
-  box-sizing: border-box;
-  font-family: "lato", sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-}
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero-small.jpg);
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
-
-.header__logo {
-  height: 3.5rem;
-}
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.header-primary {
-  color: #fff;
-  text-transform: uppercase;
-  /* to prevent the shake on animation end */
-  backface-visibility: hidden;
-  margin-bottom: 6rem;
-}
-
-.header-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation: toRight 1s ease-out;
-}
-
-.header-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-  animation: toLeft 1s ease-out;
-}
-
 @keyframes toRight {
   0% {
     opacity: 0;
@@ -108,8 +34,55 @@ body {
     transform: translateY(0);
   }
 }
-.btn:link,
-.btn:visited {
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-y: hidden;
+}
+
+body {
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #e70c0c;
+  padding: 3rem;
+}
+
+.header-primary {
+  color: #fff;
+  text-transform: uppercase;
+  /* to prevent the shake on animation end */
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+.header-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  animation: toRight 1s ease-out;
+}
+.header-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  animation: toLeft 1s ease-out;
+}
+
+.btn:link, .btn:visited {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
@@ -121,22 +94,25 @@ body {
   animation: toUp 1s 0.75s;
   animation-fill-mode: backwards;
 }
-
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
-
+.btn:hover::after {
+  transform: scaleX(1.4) scaley(1.6);
+  opacity: 0;
+}
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-
 .btn--white {
   background-color: #fff;
-  color: #777;
+  color: #e70c0c;
 }
-
+.btn--white::after {
+  background-color: #fff;
+}
 .btn::after {
   content: "";
   display: inline-block;
@@ -149,18 +125,32 @@ body {
   z-index: -1;
   transition: all 0.4s;
 }
-
-.btn--white::after {
-  background-color: #fff;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaley(1.6);
-  opacity: 0;
-}
-
 .btn--animated {
   animation: toUp 0.5s ease-out 0.7s;
   /* to make sure animation's 0% is added to element before animation begins */
   animation-fill-mode: backwards;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero-small.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+.header__logo {
+  height: 3.5rem;
+}
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
