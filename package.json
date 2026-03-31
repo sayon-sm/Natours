@@ -1,0 +1,21 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "landing page for natours",
+  "homepage": "https://github.com/sayon-sm/Natours#readme",
+  "bugs": {
+    "url": "https://github.com/sayon-sm/Natours/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sayon-sm/Natours.git"
+  },
+  "license": "ISC",
+  "author": "sm",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "sass:compile": "npx sass --watch sass/main.scss CSS/style.css",
+    "sass:build": "npx sass --style=compressed --no-source-map sass/main.scss CSS/style.min.css"
+  }
+}
