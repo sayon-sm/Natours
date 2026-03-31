@@ -15,7 +15,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "sass:compile": "npx sass --watch sass/main.scss CSS/style.css",
-    "sass:build": "npx sass --style=compressed --no-source-map sass/main.scss CSS/style.min.css"
+    "sass:compile": "sass --watch sass/main.scss CSS/style.css",
+    "sass:build": "sass --style=compressed --no-source-map sass/main.scss CSS/style.min.css"
   }
 }
