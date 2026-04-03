@@ -144,8 +144,8 @@ body {
   border-radius: 10rem;
   position: relative;
   transition: all 0.2s;
-  animation: toUp 1s 0.75s;
-  animation-fill-mode: backwards;
+  border: none;
+  cursor: pointer;
 }
 .btn:hover {
   transform: translateY(-3px);
